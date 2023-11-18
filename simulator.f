@@ -1,9 +1,11 @@
-SIMULADOR
+!SIMULADOR
 program sim
         use mpath
         use mind
         use msoup
-
+        
+        ! Declarations
+        ! Declare variables and types here
 
         logical:: a, b, c, d, e, sb, ib1, ib2, ib3
         integer ::  c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, n1, n2
@@ -39,9 +41,12 @@ program sim
         print *,"Input s, that is, the number of edges of the graph."
         read *, s
 
+        ! Random seed initialization
         call random_seed()
         c2=1
         sp=newS()
+
+        ! Step 0: Generating edges with random coordinates
         do c3=1, s
                 c12=1
                 do c5=1, ka
